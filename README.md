@@ -19,7 +19,8 @@ robots.txt, sitemap.xml, vercel.json, favicon.*
 
 ## Como publicar na Vercel
 
-1. Importe este repositório em vercel.com (Add New > Project). Não é preciso configurar build: é um site estático com uma função em `/api`.
+1. Importe este repositório em vercel.com (Add New > Project). Em **Framework Preset** deixe "Other" e não preencha Build/Output: o `vercel.json` já fixa as configurações (sem build, arquivos na raiz, função em `/api/lead`). Se o projeto já foi criado com outro preset, faça um novo deploy (Deployments > Redeploy) para valer o `vercel.json`.
+   - A branch de produção na Vercel é a branch padrão do GitHub. Hoje o código está em `claude/upbeat-pasteur-ayu13t`; se preferir `main`, crie a `main` a partir dela e ajuste em Settings > Git > Production Branch.
 2. Em **Settings > Environment Variables**, cadastre:
    - `RESEND_API_KEY`: chave da conta [Resend](https://resend.com) (envio de e-mail dos leads).
    - `LEAD_TO_EMAIL`: e-mail que recebe os leads (pode ter vários, separados por vírgula).

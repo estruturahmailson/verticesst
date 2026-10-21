@@ -1,0 +1,9 @@
+{
+  "name": "vertice-landing-page",
+  "private": true,
+  "description": "Landing page da Vértice Consultoria em SST (site estático + função /api/lead na Vercel)",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  }
+}

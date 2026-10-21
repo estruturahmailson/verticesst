@@ -1,0 +1,182 @@
+/* Estilos das seções abaixo da primeira dobra. Tokens em css/critical.css. */
+
+.section{padding:var(--section-y) 0}
+.section-surface{background:var(--color-surface)}
+.section-navy{background:var(--color-navy);color:var(--color-white)}
+.section-head{max-width:760px;margin-bottom:var(--space-5)}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-head h2{margin-bottom:var(--space-2)}
+.section-lead{font-size:var(--fs-body-lg);line-height:1.6;color:var(--color-text-muted);max-width:680px}
+.section-head.center .section-lead{margin:0 auto}
+.section-navy .section-lead{color:var(--color-white)}
+.tag{display:inline-block;padding:6px 16px;border-radius:var(--radius-pill);background:var(--color-navy);color:var(--color-white);font-size:var(--fs-small);font-weight:700;line-height:1.2;margin-bottom:var(--space-2)}
+.section-navy .tag{background:var(--color-yellow);color:var(--color-navy)}
+.section-cta{margin-top:var(--space-5);display:flex;justify-content:center}
+.icon-badge{display:inline-grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--color-navy);color:var(--color-yellow);flex:none}
+.icon-badge .icon{width:32px;height:32px}
+.icon-badge.lg .icon{width:40px;height:40px}
+
+/* Seção 3: faixa de confiança */
+.stats{display:grid;gap:var(--space-3)}
+.stat{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);border-radius:var(--radius-card);background:var(--color-surface)}
+.stat-number{display:block;font-size:var(--fs-h2);font-weight:700;line-height:1.2;font-variant-numeric:tabular-nums}
+.stat-label{display:block;color:var(--color-text-muted);line-height:1.5}
+.logos{margin-top:var(--space-5)}
+.logos[hidden]{display:none}
+.logos-caption{font-size:var(--fs-small);color:var(--color-text-muted);text-align:center;margin-bottom:var(--space-3)}
+.logos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3);align-items:center}
+.logos-grid img{width:100%;max-width:240px;margin:0 auto;border-radius:0}
+@media (min-width:769px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.logos-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Seção 4: cards de serviço (design system 6.3) */
+.services-grid{display:grid;gap:var(--space-4)}
+@media (min-width:640px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1024px){.services-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.service-card{position:relative;display:flex;flex-direction:column;transition:transform .25s ease}
+.service-media{position:relative}
+.service-media img{width:100%;aspect-ratio:16/9;border-radius:var(--radius-image) var(--radius-image) 0 0;background:var(--color-surface)}
+.service-badge{position:absolute;top:var(--space-2);left:var(--space-2);padding:6px 16px;border-radius:var(--radius-pill);background:var(--color-yellow);color:var(--color-navy);font-size:var(--fs-small);font-weight:700;line-height:1.2}
+.service-box{position:relative;flex:1;display:flex;flex-direction:column;margin:-40px var(--space-2) 0;padding:48px var(--space-3) var(--space-3);background:var(--color-white);border-radius:var(--radius-card);box-shadow:var(--shadow-card);transition:box-shadow .25s ease}
+.service-box .icon-badge{position:absolute;top:-32px;left:var(--space-3);box-shadow:0 0 0 4px var(--color-white)}
+.service-box h3{margin-bottom:var(--space-1)}
+.service-box p{color:var(--color-text-muted);margin-bottom:var(--space-3)}
+.service-box::after{content:"";position:absolute;left:0;bottom:0;width:24px;height:24px;background:var(--color-yellow);border-radius:0 0 0 var(--radius-card);clip-path:polygon(0 0,0 100%,100% 100%)}
+.card-cta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:var(--space-2);min-height:48px;color:var(--color-navy);font-weight:700;text-decoration:none;line-height:1.35}
+.card-cta:hover span:first-child{text-decoration:underline}
+.card-arrow{display:grid;place-items:center;width:48px;height:48px;flex:none;border-radius:var(--radius-small);background:var(--color-navy);color:var(--color-white);transition:background-color .25s ease,color .25s ease}
+.service-card:hover{transform:translateY(-4px)}
+.service-card:hover .service-box{box-shadow:var(--shadow-card-hover)}
+.service-card:hover .card-arrow,.card-cta:focus-visible .card-arrow{background:var(--color-yellow);color:var(--color-navy)}
+
+/* Seção 5: sobre */
+.about-intro{max-width:760px;font-size:var(--fs-body-lg);line-height:1.6;color:var(--color-text-muted)}
+.about-grid{display:grid;gap:var(--space-5);margin-top:var(--space-5);align-items:start}
+.about-photo img{width:100%;aspect-ratio:4/5;background:var(--color-surface);box-shadow:var(--shadow-card)}
+.about-photo figcaption{font-size:var(--fs-small);color:var(--color-text-muted);margin-top:var(--space-1)}
+.about-person h3{display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-2)}
+.about-person h3 .icon-badge{width:56px;height:56px}
+.about-person > p{margin-bottom:var(--space-3)}
+.check-list{display:grid;gap:12px}
+.check-list li{display:flex;gap:12px;align-items:flex-start}
+.check-list .icon{color:var(--color-navy);margin-top:3px}
+.registro{font-size:var(--fs-small);color:var(--color-text-muted);margin-top:var(--space-3)}
+.about-team{display:grid;gap:var(--space-4);margin-top:var(--space-6);align-items:center}
+.about-team img{width:100%;aspect-ratio:3/2;background:var(--color-surface);box-shadow:var(--shadow-card)}
+.about-team h3{margin-bottom:var(--space-2)}
+.case-box{position:relative;margin-top:var(--space-5);padding:var(--space-4);border-radius:var(--radius-card);background:var(--color-surface);border-left:8px solid var(--color-yellow)}
+.case-box h3{margin-bottom:var(--space-2)}
+.case-box p{max-width:820px}
+@media (min-width:900px){
+  .about-grid{grid-template-columns:5fr 7fr;gap:var(--space-6)}
+  .about-team{grid-template-columns:1fr 1fr;gap:var(--space-6)}
+}
+
+/* Seção 6: consequências */
+.risk-grid{display:grid;gap:var(--space-5);align-items:center}
+.risk-media img{width:100%;aspect-ratio:4/3;background:var(--color-surface)}
+.risk-cards{display:grid;gap:var(--space-3)}
+.risk-card{background:var(--color-white);color:var(--color-text);border-radius:var(--radius-card);padding:var(--space-3)}
+.risk-card .icon-badge{margin-bottom:var(--space-2)}
+.risk-card h3{font-size:var(--fs-h4);line-height:1.35;margin-bottom:var(--space-1)}
+.risk-card p{color:var(--color-text-muted)}
+.risk-close{margin-top:var(--space-5);font-size:var(--fs-body-lg);line-height:1.6;max-width:820px}
+@media (min-width:520px){.risk-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1024px){.risk-grid{grid-template-columns:5fr 7fr;gap:var(--space-6)}}
+
+/* Seção 7: como funciona */
+.steps-grid{display:grid;gap:var(--space-5);align-items:start}
+.steps{position:relative;display:grid;gap:var(--space-4);counter-reset:step}
+.step{position:relative;display:grid;grid-template-columns:72px 1fr;gap:var(--space-3)}
+.step:not(:last-child)::before{content:"";position:absolute;left:35px;top:72px;bottom:calc(-1 * var(--space-4));width:2px;background:rgba(20,48,94,.2)}
+.step .icon-badge{width:72px;height:72px}
+.step-num{display:block;font-size:var(--fs-small);font-weight:700;line-height:1.2;color:var(--color-text-muted);margin:6px 0 4px}
+.step h3{font-size:var(--fs-h4);line-height:1.35;margin-bottom:var(--space-1)}
+.step p{color:var(--color-text-muted)}
+.steps-media img{width:100%;aspect-ratio:3/2;background:var(--color-white);box-shadow:var(--shadow-card)}
+.steps-media figcaption{font-size:var(--fs-small);color:var(--color-text-muted);margin-top:var(--space-1)}
+@media (min-width:1024px){.steps-grid{grid-template-columns:7fr 5fr;gap:var(--space-6)}.steps-media{position:sticky;top:calc(var(--header-h) + var(--space-4))}}
+
+/* Seção 8: perguntas (acordeão com <details>) */
+.faq{max-width:880px;margin:0 auto;display:grid;gap:var(--space-2)}
+.faq details{border:1px solid var(--color-border);border-radius:var(--radius-card);background:var(--color-white);transition:box-shadow .25s ease}
+.faq details[open]{box-shadow:var(--shadow-card)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2);min-height:64px;padding:var(--space-2) var(--space-3);cursor:pointer;list-style:none;border-radius:var(--radius-card)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary h3{font-size:var(--fs-h4);line-height:1.35}
+.faq summary .icon{transition:transform .25s ease}
+.faq details[open] summary .icon{transform:rotate(180deg)}
+.faq details::details-content{block-size:0;overflow:hidden;transition:block-size .25s ease,content-visibility .25s allow-discrete}
+.faq details[open]::details-content{block-size:auto}
+.faq-answer{padding:0 var(--space-3) var(--space-3);color:var(--color-text-muted);max-width:760px}
+
+/* Seção 9: chamada final */
+.final-grid{display:grid;gap:var(--space-5);align-items:start}
+.contact-block h3{margin-bottom:var(--space-2)}
+.contact-list{display:grid;gap:var(--space-1);margin-bottom:var(--space-4)}
+.contact-list li{display:flex;gap:12px;align-items:flex-start}
+.contact-list .icon{color:var(--color-navy);margin-top:12px}
+.contact-list a,.contact-list span{display:inline-flex;align-items:center;min-height:48px;line-height:1.5}
+.contact-list a{font-weight:700;text-decoration:none;word-break:break-word}
+.contact-list a:hover{text-decoration:underline}
+.contact-list .plain{min-height:0;padding-top:12px}
+.map-link{display:block;border-radius:var(--radius-image)}
+.map-link img{width:100%;aspect-ratio:16/10;background:var(--color-white)}
+.map-figure figcaption{font-size:var(--fs-small);color:var(--color-text-muted);margin-top:var(--space-1)}
+.map-route{display:inline-flex;align-items:center;gap:var(--space-1);min-height:48px;font-weight:700;color:var(--color-navy)}
+.promises{display:grid;gap:var(--space-2);margin:var(--space-2) 0 var(--space-4)}
+.promise{display:flex;gap:var(--space-2);align-items:flex-start;background:var(--color-white);border-radius:var(--radius-card);padding:var(--space-2) var(--space-3)}
+.promise .icon-badge{width:56px;height:56px}
+.promise strong{display:block}
+.promise p{color:var(--color-text-muted)}
+.final-contacts > h3 + .contact-list{margin-top:0}
+.final-contacts .btn{width:100%}
+@media (min-width:640px){.final-contacts .btn{width:auto}}
+@media (min-width:1024px){.final-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-6)}}
+.form-row{display:grid;gap:0 var(--space-2)}
+@media (min-width:640px){.form-row{grid-template-columns:1fr 1fr}}
+
+/* Seção 10: rodapé */
+.site-footer{background:var(--color-navy-dark);color:var(--color-white);padding:var(--space-6) 0 var(--space-4);font-size:var(--fs-small);line-height:1.5}
+.footer-grid{display:grid;gap:var(--space-5)}
+.footer-brand img{width:160px;height:auto;border-radius:0;margin-bottom:var(--space-2)}
+.footer-brand p{max-width:420px;margin-bottom:var(--space-3);font-size:var(--fs-body);line-height:1.65}
+.site-footer h3{font-size:var(--fs-h4);line-height:1.35;color:var(--color-yellow);margin-bottom:var(--space-2)}
+.footer-list{display:grid;gap:4px}
+.footer-list a,.footer-list span{display:inline-flex;align-items:center;gap:var(--space-1);min-height:48px;color:var(--color-white);text-decoration:none;word-break:break-word}
+.footer-list .plain{min-height:0;align-items:flex-start;padding:12px 0}
+.footer-list .icon{width:20px;height:20px;color:var(--color-yellow)}
+.site-footer a:hover{color:var(--color-yellow)}
+.footer-legal{margin-top:var(--space-5);padding-top:var(--space-3);border-top:1px solid rgba(255,255,255,.15);display:grid;gap:var(--space-1)}
+.footer-legal a{display:inline-flex;align-items:center;min-height:48px;font-weight:700}
+@media (min-width:769px){.footer-grid{grid-template-columns:1.4fr 1.2fr .8fr .8fr}}
+
+/* Botão flutuante de WhatsApp */
+.wa-float{position:fixed;right:var(--space-2);bottom:var(--space-2);z-index:40;display:grid;place-items:center;width:60px;height:60px;border-radius:50%;background:var(--color-yellow);color:var(--color-navy);box-shadow:0 8px 24px rgba(14,34,68,.35);transition:transform .2s ease}
+.wa-float:hover{transform:translateY(-2px)}
+.wa-float .icon{width:32px;height:32px}
+@media (min-width:769px){.wa-float{right:var(--space-4);bottom:var(--space-4)}}
+
+/* Animações de entrada (somente quando o JS ativa e o usuário não pediu menos movimento) */
+.js-anim .reveal{opacity:0;transform:translateY(16px);transition:opacity .4s ease,transform .4s ease}
+.js-anim .reveal.is-visible{opacity:1;transform:none}
+.js-anim .steps .step{opacity:0;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease}
+.js-anim .steps.is-visible .step{opacity:1;transform:none}
+.js-anim .steps.is-visible .step:nth-child(2){transition-delay:.15s}
+.js-anim .steps.is-visible .step:nth-child(3){transition-delay:.3s}
+.js-anim .steps.is-visible .step:nth-child(4){transition-delay:.45s}
+.js-anim .steps.is-visible .step:nth-child(5){transition-delay:.6s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .btn:hover,.service-card:hover,.wa-float:hover{transform:none}
+}
+
+/* Página de política */
+.legal{padding:var(--space-6) 0 var(--section-y)}
+.legal .container{max-width:calc(820px + 2 * var(--space-3))}
+.legal h1{font-size:var(--fs-h2);line-height:1.2;margin-bottom:var(--space-2)}
+.legal h2{font-size:var(--fs-h3);line-height:1.3;margin:var(--space-5) 0 var(--space-2)}
+.legal p,.legal li{margin-bottom:var(--space-2);color:var(--color-text-muted)}
+.legal ul{list-style:disc;padding-left:var(--space-3)}
+.legal a{font-weight:700;color:var(--color-navy)}

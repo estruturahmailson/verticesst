@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://verticeconsultoriaemsst.com.br/sitemap.xml
